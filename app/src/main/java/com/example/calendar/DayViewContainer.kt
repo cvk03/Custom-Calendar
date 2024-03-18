@@ -13,6 +13,7 @@ import java.util.Locale
 
 class DayViewContainer(view: View) : ViewContainer(view) {
     val textView = view.findViewById<TextView>(R.id.calendarDayText)
+    val taskTextView = view.findViewById<TextView>(R.id.tv_task)
 
 
 }

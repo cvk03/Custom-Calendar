@@ -3,10 +3,12 @@ package com.example.calendar
 import MonthPagerAdapter
 import android.app.Activity
 import android.graphics.Color
+import android.opengl.Visibility
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -73,9 +75,18 @@ class MainActivity : AppCompatActivity(){
 
             override fun bind(container: DayViewContainer, data: CalendarDay) {
 
-                container.textView.text = data.date.dayOfMonth.toString()
+                val curr_date = data.date.dayOfMonth.toString()
+
+                container.textView.text = curr_date
                 if (data.position == DayPosition.MonthDate) {
                     container.textView.setTextColor(ContextCompat.getColor(applicationContext,R.color.black))
+
+                    if(curr_date == "13" || curr_date == "15")
+                    {
+                        container.taskTextView.text = "Call Customer"
+                        container.taskTextView.visibility = VISIBLE
+                        container.taskTextView.setBackgroundColor(ContextCompat.getColor(applicationContext,R.color.green))
+                    }
 
                 } else {
                     container.textView.setTextColor(Color.GRAY)
