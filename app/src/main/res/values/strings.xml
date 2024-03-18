@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calendar</string>
+    <array name="Months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <string name="month_year">%1s %2s</string>
+    <string name="previous_month">Previous Month</string>
+    <string name="next_month">Next Month</string>
+</resources>
